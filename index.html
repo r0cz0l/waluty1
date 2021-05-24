@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WALUTY</title>
+        <style>
+            body{
+             background-image: url(waluty.jpg);
+             background-size: cover;
+            }
+        </style>
+        </head>
+<body>
+  <div  id="container">
+      <div id="menu">
+          <from action = "" name="zamina">
+            <span style="font-size: xx-large">Wprowdź walute <br></span>
+              <select name="jeden" id="test1">
+                  <option name="PLN" value="PLN" id="PLN">PLN</option>
+                  <option name="EURO" value="EURO" id="EURO">EURO</option>
+                  <option name="DLR" value="DLR" id="DLR">DLR</option>
+                  <option name="GBP" value="GBP" id="GBP">GBP</option>
+                  <option name="CZK" value="CZK" id="CZK">CZK</option>
+                  <option name="CHF" value="CHF" id="CHF">CHF</option>
+              </select>
+              <input type="number" id="raz">
+              <select name="DWA" id="test">
+                  <option name="PLN" value="PLN" id="PLN">PLN</option>
+                  <option name="EURO" value="EURO" id="EURO">EURO</option>
+                  <option name="DLR" value="DLR" id="DLR">DLR</option>
+                  <option name="GBP" value="GBP" id="GBP">GBP</option>
+                  <option name="CZK" value="CZK" id="CZK">CZK</option>
+                  <option name="CHF" value="CHF" id="CHF">CHF</option>
+              </select>
+              <input type="number" id="dwa">
+              <input type="submit" onclick="nazwa1()" value="Submit">
+
+
+          </from>
+      </div>
+  </div>
+            
+    <script type="text/javascript">
+    function nazwa1(){
+        let select1 = document.getElementById("test1").value;
+        let select2 = document.getElementById("test").value;
+        console.log(select1+select2);
+        number1 = document.getElementById("raz").value;
+        number2 = document.getElementById("dwa").value;
+        if(select1 == "PLN" && select2 == "EURO" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 4.5;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 4.5;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
+        if(select1 == "PLN" && select2 == "DLR" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 3.67;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 3.67;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
+        if(select1 == "PLN" && select2 == "GBP" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 5.19;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 5.19;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
+        if(select1 == "PLN" && select2 == "CZK" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 0.18;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 0.18;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
+        if(select1 == "PLN" && select2 == "CHF" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 4.09;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 4.09;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
+    }
+    
+    
+    </script>       
+</body>
+</html>
