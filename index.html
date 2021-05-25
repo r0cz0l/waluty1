@@ -107,6 +107,18 @@
             }
            
         }
+        if(select1 == "EURO" && select2 == "DLR" ){
+            if(number1 == null || number1 == ""){
+                let wynik = number2 * 1.23;
+             document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+            }
+            else if(number2 == null || number2 == ""){
+                let wynik = number1 / 1.23;
+             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+            }
+           
+        }
     }
     
     
