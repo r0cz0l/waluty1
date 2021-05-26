@@ -1,430 +1,430 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>WALUTY</title>
-        <style>
-            body{
-             background-image: url(waluty.jpg);
-             background-size: cover;
-            }
-        </style>
-    </head>
- <body>
-  <div  id="container">
-      <div id="menu">
-          <from action = "" name="zamina">
-            <span style="font-size: xx-large">Wprowdź walute <br></span>
-              <select name="jeden" id="test1">
-                  <option name="PLN" value="PLN" id="PLN">PLN</option>
-                  <option name="EURO" value="EURO" id="EURO">EURO</option>
-                  <option name="DLR" value="DLR" id="DLR">DLR</option>
-                  <option name="GBP" value="GBP" id="GBP">GBP</option>
-                  <option name="CZK" value="CZK" id="CZK">CZK</option>
-                  <option name="CHF" value="CHF" id="CHF">CHF</option>
-              </select>
-              <input type="number" id="raz">
-              <select name="DWA" id="test">
-                  <option name="PLN" value="PLN" id="PLN">PLN</option>
-                  <option name="EURO" value="EURO" id="EURO">EURO</option>
-                  <option name="DLR" value="DLR" id="DLR">DLR</option>
-                  <option name="GBP" value="GBP" id="GBP">GBP</option>
-                  <option name="CZK" value="CZK" id="CZK">CZK</option>
-                  <option name="CHF" value="CHF" id="CHF">CHF</option>
-              </select>
-              <input type="number" id="dwa">
-              <input type="submit" onclick="nazwa1()" value="Submit">
+<html><head>
+    <meta charset="utf-8">
+    <title>WALUTY</title>
+    <style>
+        body{
+         background-image: url(waluty.jpg);
+         background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div  id="container">
+  <div id="menu">
+      <from action = "" name="zamina">
+        <span style="font-size: xx-large">Wprowdź walute <br></span>
+          <select name="jeden" id="test1">
+              <option name="PLN" value="PLN" id="PLN">PLN</option>
+              <option name="EURO" value="EURO" id="EURO">EURO</option>
+              <option name="DLR" value="DLR" id="DLR">DLR</option>
+              <option name="GBP" value="GBP" id="GBP">GBP</option>
+              <option name="CZK" value="CZK" id="CZK">CZK</option>
+              <option name="CHF" value="CHF" id="CHF">CHF</option>
+          </select>
+          <input type="number" id="raz">
+          <select name="DWA" id="test">
+              <option name="PLN" value="PLN" id="PLN">PLN</option>
+              <option name="EURO" value="EURO" id="EURO">EURO</option>
+              <option name="DLR" value="DLR" id="DLR">DLR</option>
+              <option name="GBP" value="GBP" id="GBP">GBP</option>
+              <option name="CZK" value="CZK" id="CZK">CZK</option>
+              <option name="CHF" value="CHF" id="CHF">CHF</option>
+          </select>
+          <input type="number" id="dwa">
+          <input type="submit" onclick="nazwa1()" value="Submit">
 
 
-          </from>
-      </div>
+      </from>
   </div>
-            
-    <script type="text/javascript">
-    function nazwa1(){
-        let select1 = document.getElementById("test1").value;
-        let select2 = document.getElementById("test").value;
-        console.log(select1+select2);
-        number1 = document.getElementById("raz").value;
-        number2 = document.getElementById("dwa").value;
-        if(select1 == "PLN" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 4.5;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
+</div>
+        
+<script type="text/javascript">
+function nazwa1(){
+    let select1 = document.getElementById("test1").value;
+    let select2 = document.getElementById("test").value;
+    console.log(select1+select2);
+    number1 = document.getElementById("raz").value;
+    number2 = document.getElementById("dwa").value;
+    if(select1 == "PLN" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 4.5;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
 
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 4.5;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
         }
-        //PLN
-        if(select1 == "PLN" && select2 == "DLR" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 3.67;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 3.67;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 4.5;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
         }
-        if(select1 == "PLN" && select2 == "GBP" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 5.19;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 5.19;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "PLN" && select2 == "CZK" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 0.18;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.18;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "PLN" && select2 == "CHF" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 4.09;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 4.09;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-            if(select1 == "PLN" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 0.22;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.22;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        //EURO
-        if(select1 == "EURO" && select2 == "DLR" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 0.82;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.82;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "EURO" && select2 == "CHF" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 0.91;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.91;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "EURO" && select2 == "PLN" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 4.09;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 4.09;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "EURO" && select2 == "GBP" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 1.16;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.16;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "EURO" && select2 == "CZK" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 25.4;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 25.4;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        //DLR
-        if(select1 == "DLR" && select2 == "GBP" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 1.16;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.16;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "DLR" && select2 == "PLN" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 3.36;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 3.36;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "DLR" && select2 == "CHF" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 0.9;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.9;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "DLR" && select2 == "CZK" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 * 20.76;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 20.76;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "DLR" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.82 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.82;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        //CZK
-        if(select1 == "CZK" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.039 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.039;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CZK" && select2 == "DLR" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.048 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.048;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CZK" && select2 == "PLN" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.18 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.18;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CZK" && select2 == "GBP" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.034 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.034;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CZK" && select2 == "CHF" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.043 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.043;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        //GBP
-        if(select1 == "GBP" && select2 == "CHF" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *1.27 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.27;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "GBP" && select2 == "DLR" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *1.41 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.41;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "GBP" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *1.15 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.15;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "GBP" && select2 == "CZK" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *29.34 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 29.34;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "GBP" && select2 == "PLN" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *5.17 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 5.17;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        //CHF
-        if(select1 == "CHF" && select2 == "PLN" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *4.08 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 4.08;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CHF" && select2 == "GBP" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.79 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.79;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CHF" && select2 == "DLR" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *1.12 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 1.12;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CHF" && select2 == "EURO" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *0.91 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 0.91;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
-        if(select1 == "CHF" && select2 == "CZK" ){
-            if(number1 == null || number1 == ""){
-                let wynik = number2 *23.15 ;
-             document.getElementById("raz").value = Math.round(wynik*100)/100;
-
-            }
-            else if(number2 == null || number2 == ""){
-                let wynik = number1 / 23.15;
-             document.getElementById("dwa").value = Math.round(wynik*100)/100;  
-            }
-           
-        }
+       
     }
-    
-      </script>  
+    //PLN
+    if(select1 == "PLN" && select2 == "DLR" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 3.67;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 3.67;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "PLN" && select2 == "GBP" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 5.19;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 5.19;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "PLN" && select2 == "CZK" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 0.18;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.18;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "PLN" && select2 == "CHF" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 4.09;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 4.09;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+        if(select1 == "PLN" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 0.22;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.22;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    //EURO
+    if(select1 == "EURO" && select2 == "DLR" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 0.82;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.82;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "EURO" && select2 == "CHF" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 0.91;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.91;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "EURO" && select2 == "PLN" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 4.09;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 4.09;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "EURO" && select2 == "GBP" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 1.16;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.16;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "EURO" && select2 == "CZK" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 25.4;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 25.4;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    //DLR
+    if(select1 == "DLR" && select2 == "GBP" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 1.16;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.16;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "DLR" && select2 == "PLN" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 3.36;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 3.36;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "DLR" && select2 == "CHF" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 0.9;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.9;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "DLR" && select2 == "CZK" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 * 20.76;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 20.76;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "DLR" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.82 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.82;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    //CZK
+    if(select1 == "CZK" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.039 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.039;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CZK" && select2 == "DLR" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.048 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.048;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CZK" && select2 == "PLN" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.18 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.18;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CZK" && select2 == "GBP" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.034 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.034;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CZK" && select2 == "CHF" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.043 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.043;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    //GBP
+    if(select1 == "GBP" && select2 == "CHF" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *1.27 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.27;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "GBP" && select2 == "DLR" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *1.41 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.41;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "GBP" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *1.15 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.15;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "GBP" && select2 == "CZK" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *29.34 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 29.34;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "GBP" && select2 == "PLN" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *5.17 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 5.17;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    //CHF
+    if(select1 == "CHF" && select2 == "PLN" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *4.08 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 4.08;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CHF" && select2 == "GBP" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.79 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.79;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CHF" && select2 == "DLR" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *1.12 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 1.12;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CHF" && select2 == "EURO" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *0.91 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 0.91;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    if(select1 == "CHF" && select2 == "CZK" ){
+        if(number1 == null || number1 == ""){
+            let wynik = number2 *23.15 ;
+         document.getElementById("raz").value = Math.round(wynik*100)/100;
+
+        }
+        else if(number2 == null || number2 == ""){
+            let wynik = number1 / 23.15;
+         document.getElementById("dwa").value = Math.round(wynik*100)/100;  
+        }
+       
+    }
+    }
+}
+
+    </script>
     </body>
-</html>
+    </html>
